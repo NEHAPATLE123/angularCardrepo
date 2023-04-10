@@ -1,0 +1,83 @@
+<!-- 
+
+  -----------------------  form with table  --------------------
+
+<div class="container">
+  <div class="row">
+
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="fname">First name</label>
+        <input type="text" [(ngModel)]="fnameValue" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="lname" >Last name</label>
+        <input type="text" [(ngModel)]="lnameValue" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="email">email</label>
+        <input type="text" [(ngModel)]="emailValue"  class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="contact">contact</label>
+        <input type="text" [(ngModel)]="contactValue"  class="form-control">
+      </div>
+      <div class="text-right mb-4">
+        <button class="btn btn-primary" (click)="onStdAdd($event)">Add Student</button>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>sr no</th>
+            <th>fName</th>
+            <th>lNmae</th>
+            <th>email</th>
+            <th>contact</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let std of stdArray; let i = index">
+            <td>{{i + 1}}</td>
+            <td>{{std.fname}}</td>
+            <td>{{std.lname}}</td>
+            <td>{{std.email}}</td>
+            <td>{{std.contact}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</div> -->
+
+<!-- ------------------------ card ----------------------- -->
+
+<!-- <h1 class="bg-success text-center"> Cards </h1>
+<div class="container">
+  <div class="col-md-4 offset-md-4">
+    <div class="row">
+      <app-card [cardInfo]="card" *ngFor="let card of postsInfo"></app-card>
+    </div>
+  </div>
+</div> -->
+
+<h1 class="bg-warning text-center">Cards</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 offset-md-4">
+      <app-products [productInfo]="card" *ngFor="let card of postsInfo"></app-products>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
